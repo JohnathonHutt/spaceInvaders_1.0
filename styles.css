@@ -1,0 +1,24 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(20, 132, 50);
+}
+
+h1 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-family: 'Press Start 2P', arial;
+  color: yellow;
+}
+
+canvas {
+  border: 1px solid yellow;
+  background-color: black;
+  margin: 0 auto;
+}
