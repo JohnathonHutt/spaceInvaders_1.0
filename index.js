@@ -107,9 +107,14 @@ function playSound(name) {
 //event handlers
 document.addEventListener('keydown', keyDownHandler, false);
 document.addEventListener('keyup', keyUpHandler, false);
+//separated laser fire and directions so that they can work simultaneously
+document.addEventListener('keydown', laserDownHandler, false);
+document.addEventListener('keyup', laserUpHandler, false);
 
 let rPressed = false;
 let lPressed = false;
+//flag prevents holding down for rapid fire
+let laserCharged = true;
 
 function keyDownHandler(e) {
   switch (e.keyCode) {
@@ -118,12 +123,6 @@ function keyDownHandler(e) {
       break;
     case 37:
       lPressed = true;
-      break;
-    case 38:
-      newLaser();
-      break;
-    case 32:
-      newLaser();
       break;
     default:
       console.log(e.keyCode);
@@ -143,14 +142,44 @@ function keyUpHandler(e) {
   }
 }
 
+function laserDownHandler(e) {
+  switch (e.keyCode) {
+    case 38:
+      newLaser();
+      break;
+    case 32:
+      newLaser();
+      break;
+    default:
+      console.log(e.keyCode);
+  }
+}
+
+function laserUpHandler(e) {
+  switch (e.keyCode) {
+    case 38:
+      laserCharged = true;
+      break;
+    case 32:
+      laserCharged = true;
+      break;
+    default:
+      console.log(e.keyCode);
+  }
+}
+
 function newLaser() {
-  if (shield.status > 0) {
-    if (ship.x+30 < shield.x || ship.x+30 > shield.x + shield.w) {
+  if (laserCharged) {
+    console.log('went through the laser pressed pathway');
+    if (shield.status > 0) {
+      if (ship.x+30 < shield.x || ship.x+30 > shield.x + shield.w) {
+        fireLaser();
+      }
+    } else {
       fireLaser();
     }
-  } else {
-    fireLaser();
   }
+  laserCharged = false;
 }
 
 function fireLaser() {
@@ -466,8 +495,8 @@ function checkForAliensCleared() {
   if (aliens.length === 0 && !motherShip.isInitialized) {
     gst.round += 1;
     initializedThisRound = false;
-    alien.speedX = 20 + (10 * gst.round);
-    alien.speedY = 60 + (10 * gst.round);
+    alien.speedX = 20 + (15 * gst.round);
+    alien.speedY = 60 + (20 * gst.round);
     populateAlienArr(0, -160);
   }
 }
