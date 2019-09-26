@@ -1,7 +1,7 @@
 # spaceInvaders_1.0
 My personal take on a classic, with original artwork/sprites.
 
-This game is currently desktop only - controls: arrow keys - left and right to move ship, up to fire laser.
+This game is currently desktop only - controls: arrow keys - left and right to move ship, up or apce bar to fire laser.
 
 You may not fire while under the shield, the shield is resistant to alien lasers but can only withstand three 'bombings' from the motherShip.
 
