@@ -1,7 +1,7 @@
 # spaceInvaders_1.0
 My personal take on a classic, with original artwork/sprites.
 
-This game is currently desktop only - controls: arrow keys - left and right to move ship, up or apce bar to fire laser.
+This game is currently desktop only - controls: arrow keys - left and right to move ship, up or space bar to fire laser.
 
 You may not fire while under the shield, the shield is resistant to alien lasers but can only withstand three 'bombings' from the motherShip.
 
@@ -11,4 +11,4 @@ All sprites/animations and the background were created by me for the purpose of 
 
 Sound effects were used from the original space invaders, asteroid, Super Mario Bros (the one up sound) and (I think) a blaster from star wars (i.e. questionable youtube source).
 
-The goal of this project was to create a reasonably polished, complete game using vanilla JavaScript (no frameworks used) to practical understanding of animation and game developemnt with JavaScript/HTML5 canvas.
+The goal of this project was to create a reasonably polished, complete game using vanilla JavaScript (no frameworks used) to gain a practical understanding of animation and game developemnt with JavaScript/HTML5 canvas - I hope you enjoy playing.
