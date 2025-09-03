@@ -1,6 +1,6 @@
 # spaceInvaders_1.0
 
-[Play Here][https://johnathonhutt.github.io/spaceInvaders_1.0/]
+[Play Here](https://johnathonhutt.github.io/spaceInvaders_1.0/)
 
 My personal take on a classic, with original artwork/sprites.
 
